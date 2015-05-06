@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49C6C8051AF9595200A711F2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C6C8041AF9595200A711F2 /* AppKit.framework */; };
+		49C6C8071AF9595200A711F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C6C8061AF9595200A711F2 /* Foundation.framework */; };
+		49C6C80C1AF9595200A711F2 /* PrettyPrintJSON.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 49C6C80B1AF9595200A711F2 /* PrettyPrintJSON.xcscheme */; };
+		49C6C80F1AF9595200A711F2 /* PrettyPrintJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C6C80E1AF9595200A711F2 /* PrettyPrintJSON.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		49C6C8011AF9595200A711F2 /* PrettyPrintJSON.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrettyPrintJSON.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		49C6C8041AF9595200A711F2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		49C6C8061AF9595200A711F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		49C6C80A1AF9595200A711F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49C6C80B1AF9595200A711F2 /* PrettyPrintJSON.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = PrettyPrintJSON.xcscheme; path = PrettyPrintJSON.xcodeproj/xcshareddata/xcschemes/PrettyPrintJSON.xcscheme; sourceTree = SOURCE_ROOT; };
+		49C6C80D1AF9595200A711F2 /* PrettyPrintJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrettyPrintJSON.h; sourceTree = "<group>"; };
+		49C6C80E1AF9595200A711F2 /* PrettyPrintJSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrettyPrintJSON.m; sourceTree = "<group>"; };
+		49D8DABC1AF9653E0060A747 /* DVTFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFoundation.h; sourceTree = "<group>"; };
+		49D8DABD1AF9653E0060A747 /* DVTKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTKit.h; sourceTree = "<group>"; };
+		49D8DABE1AF9653E0060A747 /* IDEFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEFoundation.h; sourceTree = "<group>"; };
+		49D8DABF1AF9653E0060A747 /* IDEKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEKit.h; sourceTree = "<group>"; };
+		49D8DAC01AF9653E0060A747 /* IDESourceEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditor.h; sourceTree = "<group>"; };
+		D1CCBA392EC039CF6C7143C4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D667FACF3B338112F71B6746 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EC406CF5812F4031B77B3540 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49C6C7FF1AF9595200A711F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49C6C8051AF9595200A711F2 /* AppKit.framework in Frameworks */,
+				49C6C8071AF9595200A711F2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0946BDDA29A0E58663175CC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1CCBA392EC039CF6C7143C4 /* Pods.debug.xcconfig */,
+				D667FACF3B338112F71B6746 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		49C6C7F81AF9595200A711F2 = {
+			isa = PBXGroup;
+			children = (
+				49C6C8081AF9595200A711F2 /* PrettyPrintJSON */,
+				49C6C8031AF9595200A711F2 /* Frameworks */,
+				49C6C8021AF9595200A711F2 /* Products */,
+				0946BDDA29A0E58663175CC2 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		49C6C8021AF9595200A711F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49C6C8011AF9595200A711F2 /* PrettyPrintJSON.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49C6C8031AF9595200A711F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49C6C8041AF9595200A711F2 /* AppKit.framework */,
+				49C6C8061AF9595200A711F2 /* Foundation.framework */,
+				EC406CF5812F4031B77B3540 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49C6C8081AF9595200A711F2 /* PrettyPrintJSON */ = {
+			isa = PBXGroup;
+			children = (
+				49D8DABB1AF9653E0060A747 /* XcodeClasses */,
+				49C6C80D1AF9595200A711F2 /* PrettyPrintJSON.h */,
+				49C6C80E1AF9595200A711F2 /* PrettyPrintJSON.m */,
+				49C6C8091AF9595200A711F2 /* Supporting Files */,
+			);
+			path = PrettyPrintJSON;
+			sourceTree = "<group>";
+		};
+		49C6C8091AF9595200A711F2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49C6C80A1AF9595200A711F2 /* Info.plist */,
+				49C6C80B1AF9595200A711F2 /* PrettyPrintJSON.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49D8DABB1AF9653E0060A747 /* XcodeClasses */ = {
+			isa = PBXGroup;
+			children = (
+				49D8DABC1AF9653E0060A747 /* DVTFoundation.h */,
+				49D8DABD1AF9653E0060A747 /* DVTKit.h */,
+				49D8DABE1AF9653E0060A747 /* IDEFoundation.h */,
+				49D8DABF1AF9653E0060A747 /* IDEKit.h */,
+				49D8DAC01AF9653E0060A747 /* IDESourceEditor.h */,
+			);
+			name = XcodeClasses;
+			path = "../../../../Downloads/KFCocoaPodsPlugin-master/KFCocoaPodsPlugin/XcodeClasses";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49C6C8001AF9595200A711F2 /* PrettyPrintJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49C6C8121AF9595200A711F2 /* Build configuration list for PBXNativeTarget "PrettyPrintJSON" */;
+			buildPhases = (
+				49C6C7FD1AF9595200A711F2 /* Sources */,
+				49C6C7FE1AF9595200A711F2 /* Resources */,
+				49C6C7FF1AF9595200A711F2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrettyPrintJSON;
+			productName = PrettyPrintJSON;
+			productReference = 49C6C8011AF9595200A711F2 /* PrettyPrintJSON.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49C6C7F91AF9595200A711F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = psobko;
+				TargetAttributes = {
+					49C6C8001AF9595200A711F2 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+				};
+			};
+			buildConfigurationList = 49C6C7FC1AF9595200A711F2 /* Build configuration list for PBXProject "PrettyPrintJSON" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 49C6C7F81AF9595200A711F2;
+			productRefGroup = 49C6C8021AF9595200A711F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49C6C8001AF9595200A711F2 /* PrettyPrintJSON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49C6C7FE1AF9595200A711F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49C6C80C1AF9595200A711F2 /* PrettyPrintJSON.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49C6C7FD1AF9595200A711F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49C6C80F1AF9595200A711F2 /* PrettyPrintJSON.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		49C6C8101AF9595200A711F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+			};
+			name = Debug;
+		};
+		49C6C8111AF9595200A711F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		49C6C8131AF9595200A711F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1CCBA392EC039CF6C7143C4 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = PrettyPrintJSON/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		49C6C8141AF9595200A711F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D667FACF3B338112F71B6746 /* Pods.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = PrettyPrintJSON/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49C6C7FC1AF9595200A711F2 /* Build configuration list for PBXProject "PrettyPrintJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49C6C8101AF9595200A711F2 /* Debug */,
+				49C6C8111AF9595200A711F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49C6C8121AF9595200A711F2 /* Build configuration list for PBXNativeTarget "PrettyPrintJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49C6C8131AF9595200A711F2 /* Debug */,
+				49C6C8141AF9595200A711F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49C6C7F91AF9595200A711F2 /* Project object */;
+}

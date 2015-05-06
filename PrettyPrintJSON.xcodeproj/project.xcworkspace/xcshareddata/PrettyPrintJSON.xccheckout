@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>09A42C25-ED08-4A81-9F2C-21C4E6508706</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PrettyPrintJSON</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EA18E683E51C1655FAA6FCFED020CF0325BD1EF9</key>
+		<string>https://github.com/psobko/PrettyPrintJSON.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PrettyPrintJSON.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EA18E683E51C1655FAA6FCFED020CF0325BD1EF9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/psobko/PrettyPrintJSON.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EA18E683E51C1655FAA6FCFED020CF0325BD1EF9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EA18E683E51C1655FAA6FCFED020CF0325BD1EF9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PrettyPrintJSON</string>
+		</dict>
+	</array>
+</dict>
+</plist>
