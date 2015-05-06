@@ -14,6 +14,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4903A7EA1AFACD2F00F467D1 /* DVTFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFoundation.h; sourceTree = "<group>"; };
+		4903A7EB1AFACD2F00F467D1 /* DVTKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTKit.h; sourceTree = "<group>"; };
+		4903A7EC1AFACD2F00F467D1 /* IDEFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEFoundation.h; sourceTree = "<group>"; };
+		4903A7ED1AFACD2F00F467D1 /* IDEKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEKit.h; sourceTree = "<group>"; };
+		4903A7EE1AFACD2F00F467D1 /* IDESourceEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditor.h; sourceTree = "<group>"; };
 		49C6C8011AF9595200A711F2 /* PrettyPrintJSON.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrettyPrintJSON.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C6C8041AF9595200A711F2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		49C6C8061AF9595200A711F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -21,14 +26,6 @@
 		49C6C80B1AF9595200A711F2 /* PrettyPrintJSON.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = PrettyPrintJSON.xcscheme; path = PrettyPrintJSON.xcodeproj/xcshareddata/xcschemes/PrettyPrintJSON.xcscheme; sourceTree = SOURCE_ROOT; };
 		49C6C80D1AF9595200A711F2 /* PrettyPrintJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrettyPrintJSON.h; sourceTree = "<group>"; };
 		49C6C80E1AF9595200A711F2 /* PrettyPrintJSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrettyPrintJSON.m; sourceTree = "<group>"; };
-		49D8DABC1AF9653E0060A747 /* DVTFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFoundation.h; sourceTree = "<group>"; };
-		49D8DABD1AF9653E0060A747 /* DVTKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTKit.h; sourceTree = "<group>"; };
-		49D8DABE1AF9653E0060A747 /* IDEFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEFoundation.h; sourceTree = "<group>"; };
-		49D8DABF1AF9653E0060A747 /* IDEKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEKit.h; sourceTree = "<group>"; };
-		49D8DAC01AF9653E0060A747 /* IDESourceEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditor.h; sourceTree = "<group>"; };
-		D1CCBA392EC039CF6C7143C4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		D667FACF3B338112F71B6746 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		EC406CF5812F4031B77B3540 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,13 +41,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0946BDDA29A0E58663175CC2 /* Pods */ = {
+		4903A7E91AFACD2F00F467D1 /* XcodeClasses */ = {
 			isa = PBXGroup;
 			children = (
-				D1CCBA392EC039CF6C7143C4 /* Pods.debug.xcconfig */,
-				D667FACF3B338112F71B6746 /* Pods.release.xcconfig */,
+				4903A7EA1AFACD2F00F467D1 /* DVTFoundation.h */,
+				4903A7EB1AFACD2F00F467D1 /* DVTKit.h */,
+				4903A7EC1AFACD2F00F467D1 /* IDEFoundation.h */,
+				4903A7ED1AFACD2F00F467D1 /* IDEKit.h */,
+				4903A7EE1AFACD2F00F467D1 /* IDESourceEditor.h */,
 			);
-			name = Pods;
+			path = XcodeClasses;
 			sourceTree = "<group>";
 		};
 		49C6C7F81AF9595200A711F2 = {
@@ -59,7 +59,6 @@
 				49C6C8081AF9595200A711F2 /* PrettyPrintJSON */,
 				49C6C8031AF9595200A711F2 /* Frameworks */,
 				49C6C8021AF9595200A711F2 /* Products */,
-				0946BDDA29A0E58663175CC2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,7 +75,6 @@
 			children = (
 				49C6C8041AF9595200A711F2 /* AppKit.framework */,
 				49C6C8061AF9595200A711F2 /* Foundation.framework */,
-				EC406CF5812F4031B77B3540 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -84,7 +82,7 @@
 		49C6C8081AF9595200A711F2 /* PrettyPrintJSON */ = {
 			isa = PBXGroup;
 			children = (
-				49D8DABB1AF9653E0060A747 /* XcodeClasses */,
+				4903A7E91AFACD2F00F467D1 /* XcodeClasses */,
 				49C6C80D1AF9595200A711F2 /* PrettyPrintJSON.h */,
 				49C6C80E1AF9595200A711F2 /* PrettyPrintJSON.m */,
 				49C6C8091AF9595200A711F2 /* Supporting Files */,
@@ -99,19 +97,6 @@
 				49C6C80B1AF9595200A711F2 /* PrettyPrintJSON.xcscheme */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		49D8DABB1AF9653E0060A747 /* XcodeClasses */ = {
-			isa = PBXGroup;
-			children = (
-				49D8DABC1AF9653E0060A747 /* DVTFoundation.h */,
-				49D8DABD1AF9653E0060A747 /* DVTKit.h */,
-				49D8DABE1AF9653E0060A747 /* IDEFoundation.h */,
-				49D8DABF1AF9653E0060A747 /* IDEKit.h */,
-				49D8DAC01AF9653E0060A747 /* IDESourceEditor.h */,
-			);
-			name = XcodeClasses;
-			path = "../../../../Downloads/KFCocoaPodsPlugin-master/KFCocoaPodsPlugin/XcodeClasses";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +248,6 @@
 		};
 		49C6C8131AF9595200A711F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1CCBA392EC039CF6C7143C4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
@@ -279,7 +263,6 @@
 		};
 		49C6C8141AF9595200A711F2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D667FACF3B338112F71B6746 /* Pods.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;

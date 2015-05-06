@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>09A42C25-ED08-4A81-9F2C-21C4E6508706</string>
 	<key>IDESourceControlProjectName</key>
-	<string>PrettyPrintJSON</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>EA18E683E51C1655FAA6FCFED020CF0325BD1EF9</key>
 		<string>https://github.com/psobko/PrettyPrintJSON.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PrettyPrintJSON.xcodeproj</string>
+	<string>PrettyPrintJSON.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>EA18E683E51C1655FAA6FCFED020CF0325BD1EF9</key>
