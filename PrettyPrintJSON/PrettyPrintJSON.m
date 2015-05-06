@@ -96,6 +96,11 @@ static PrettyPrintJSON *sharedPlugin;
 
 -(NSString*)prettyPrintedJSONForString:(NSString *)uglyString
 {
+    if(!uglyString)
+    {
+        return [NSString stringWithFormat:@"JSON Parse Error: No string selected"];
+    }
+ 
     NSError *error;
     id data = [NSJSONSerialization JSONObjectWithData:[uglyString dataUsingEncoding:NSUTF8StringEncoding]
                                               options:0
