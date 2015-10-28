@@ -9,7 +9,7 @@
 #import <AppKit/AppKit.h>
 
 @interface PrettyPrintJSON : NSObject
-
+//
 + (instancetype)sharedPlugin;
 
 @property (nonatomic, strong, readonly) NSBundle* bundle;

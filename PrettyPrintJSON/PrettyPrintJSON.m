@@ -21,110 +21,108 @@ static PrettyPrintJSON *sharedPlugin;
 
 + (void)pluginDidLoad:(NSBundle *)plugin
 {
-    static dispatch_once_t onceToken;
-    NSString *currentApplicationName = [[NSBundle mainBundle] infoDictionary][@"CFBundleName"];
-    
-    if ([currentApplicationName isEqual:@"Xcode"])
-    {
-        dispatch_once(&onceToken, ^{
-            sharedPlugin = [[self alloc] initWithBundle:plugin];
-        });
-    }
+  static dispatch_once_t onceToken;
+  NSString *currentApplicationName = [[NSBundle mainBundle] infoDictionary][@"CFBundleName"];
+  
+  if ([currentApplicationName isEqual:@"Xcode"])
+  {
+    dispatch_once(&onceToken, ^{
+      sharedPlugin = [[self alloc] initWithBundle:plugin];
+      
+      dispatch_async(dispatch_get_main_queue(), ^{
+        
+        NSMenu *editorMenu = [[[NSApp mainMenu] itemWithTitle:@"Edit"] submenu];
+        
+        if (!editorMenu) return;
+        
+        NSString *versionString = [[NSBundle bundleForClass:[self class]] objectForInfoDictionaryKey:@"CFBundleVersion"];
+        NSMenuItem *prettyMenuItem = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Pretty Print JSON (%@)", versionString]
+                                                                action:@selector(menuItemSelected:)
+                                                         keyEquivalent:@"j"];
+        
+        prettyMenuItem.target = sharedPlugin;
+        prettyMenuItem.keyEquivalentModifierMask = NSControlKeyMask;
+        
+        [editorMenu addItem:prettyMenuItem];
+      });
+    });
+  }
 }
 
 #pragma mark - init
 
 + (instancetype)sharedPlugin
 {
-    return sharedPlugin;
+  return sharedPlugin;
 }
 
 - (id)initWithBundle:(NSBundle *)plugin
 {
-    if (self = [super init])
-    {
-        self.bundle = plugin;
-        NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Edit"];
-        if (menuItem)
-        {
-            [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-            NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Pretty Print JSON"
-                                                                    action:@selector(menuItemSelected)
-                                                             keyEquivalent:@""];
-            [actionMenuItem setTarget:self];
-            [actionMenuItem setKeyEquivalent:@"j"];
-            [actionMenuItem setKeyEquivalentModifierMask:NSControlKeyMask];
-            [[menuItem submenu] addItem:actionMenuItem];
-        }
-    }
-    return self;
+  if (self = [super init])
+  {
+    self.bundle = plugin;
+  }
+  return self;
 }
 
-- (void)menuItemSelected
+- (void)menuItemSelected:(id)sender
 {
-    for (NSWindow *window in [NSApp windows])
-    {
-        NSView *contentView = window.contentView;
-        IDEConsoleTextView *console = [self consoleViewInMainView:contentView];
-        NSRange range = [console selectedRange];
-        console.logMode = 1;
-        [console insertText:[self prettyPrintedJSONForString:[console.string substringWithRange:range]]];
-        [console insertNewline:@""];
-        console.logMode = 0;
-    }
+  NSView *contentView = [[NSApp mainWindow] contentView];
+  IDEConsoleTextView *consoleTextView = (IDEConsoleTextView *)[self getViewByClassName:@"IDEConsoleTextView" andContainerView:contentView];
+  NSRange range = [consoleTextView selectedRange];
+  consoleTextView.logMode = 1;
+  [consoleTextView insertText:[self prettyPrintedJSONForString:[consoleTextView.string substringWithRange:range]]];
+  [consoleTextView insertNewline:@""];
+  consoleTextView.logMode = 0;
 }
 
-- (IDEConsoleTextView *)consoleViewInMainView:(NSView *)mainView
+- (NSView *)getViewByClassName:(NSString *)className andContainerView:(NSView *)container
 {
-    for (NSView *childView in mainView.subviews)
-    {
-        if ([childView isKindOfClass:NSClassFromString(@"IDEConsoleTextView")])
-        {
-            return (IDEConsoleTextView *)childView;
-        }
-        else
-        {
-            NSView *consoleView = [self consoleViewInMainView:childView];
-            if ([consoleView isKindOfClass:NSClassFromString(@"IDEConsoleTextView")])
-            {
-                return (IDEConsoleTextView *)consoleView;
-            }
-        }
+  Class class = NSClassFromString(className);
+  for (NSView *subView in container.subviews) {
+    if ([subView isKindOfClass:class]) {
+      return subView;
+    } else {
+      NSView *view = [self getViewByClassName:className andContainerView:subView];
+      if ([view isKindOfClass:class]) {
+        return view;
+      }
     }
-    return nil;
+  }
+  return nil;
 }
 
 -(NSString*)prettyPrintedJSONForString:(NSString *)uglyString
 {
-    if(!uglyString)
-    {
-        return [NSString stringWithFormat:@"JSON Parse Error: No string selected"];
-    }
- 
-    NSError *error;
-    id data = [NSJSONSerialization JSONObjectWithData:[uglyString dataUsingEncoding:NSUTF8StringEncoding]
-                                              options:0
-                                                error:&error];
-    
-    if(error)
-    {
-        return [NSString stringWithFormat:@"JSON Parse Error: %@ %@", error.localizedDescription, [error.userInfo objectForKey:@"NSDebugDescription"]];
-    }
-
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data
-                                                       options:(NSJSONWritingOptions)NSJSONWritingPrettyPrinted
-                                                         error:&error];
-    if(error)
-    {
-        return [NSString stringWithFormat:@"JSON Parse Error: %@ %@", error.localizedDescription, [error.userInfo objectForKey:@"NSDebugDescription"]];
-    }
-    
-    return (jsonData) ? [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding] : @"{}";
+  if(!uglyString)
+  {
+    return [NSString stringWithFormat:@"JSON Parse Error: No string selected"];
+  }
+  
+  NSError *error;
+  id data = [NSJSONSerialization JSONObjectWithData:[uglyString dataUsingEncoding:NSUTF8StringEncoding]
+                                            options:0
+                                              error:&error];
+  
+  if(error)
+  {
+    return [NSString stringWithFormat:@"JSON Parse Error: %@ %@", error.localizedDescription, [error.userInfo objectForKey:@"NSDebugDescription"]];
+  }
+  
+  NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data
+                                                     options:(NSJSONWritingOptions)NSJSONWritingPrettyPrinted
+                                                       error:&error];
+  if(error)
+  {
+    return [NSString stringWithFormat:@"JSON Parse Error: %@ %@", error.localizedDescription, [error.userInfo objectForKey:@"NSDebugDescription"]];
+  }
+  
+  return (jsonData) ? [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding] : @"{}";
 }
 
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 
